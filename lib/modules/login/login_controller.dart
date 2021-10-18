@@ -11,7 +11,6 @@ class LoginController {
         'email',
       ],
     );
-
     try {
       final response = await _googleSignIn.signIn();
       final user = UserModel(
@@ -22,7 +21,6 @@ class LoginController {
       print(response);
     } catch (error) {
       authController.setUser(context, null);
-
       print(error);
     }
   }
